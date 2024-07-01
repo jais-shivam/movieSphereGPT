@@ -1,0 +1,24 @@
+- Created react App(Via Vite)
+- Configured Tailwind CSS
+- Header
+- Routing
+- Login Form
+- Signup Form
+- Form validation
+- useRed Hook
+
+
+# Features
+- Login/Sign Up
+  - Sign In /Sign up Form
+  - redirect to Browse Page
+- Browse (after authentication)
+  - Header
+  - Main Movie in Background
+  - Title & Description
+  - MovieSuggestions
+    - MovieLists * N
+
+- NetflixGPT
+  - Search Bar
+  - Movie Suggestions
