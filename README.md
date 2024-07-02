@@ -1,3 +1,38 @@
+- Created react App(Via Vite)
+- Configured Tailwind CSS
+- Header
+- Routing of app
+- Login Form
+- Signup Form
+- Form validation
+- useRef Hook
+- firebase setup
+- Deploying to firebase
+- Create signup user account
+- Sign in Account
+- created redux store with userSlice
+- Implimented signout
+- Update profile
+
+
+# Features
+- Login/Sign Up
+  - Sign In /Sign up Form
+  - redirect to Browse Page
+- Browse (after authentication)
+  - Header
+  - Main Movie in Background
+  - Title & Description
+  - MovieSuggestions
+    - MovieLists * N
+
+- NetflixGPT
+  - Search Bar
+  - Movie Suggestions
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
