@@ -3,9 +3,9 @@ import Header from "./Header";
 import { checkValidData, checkValidDataSignUp } from "../utils/validations";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase'
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
+import { BG_URL, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInform, setIsSignInform] = useState(true);
@@ -13,7 +13,6 @@ const Login = () => {
   const email = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
   const name = useRef<HTMLInputElement>(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
@@ -38,12 +37,12 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name?.current!.value,
-            photoURL: "https://media.licdn.com/dms/image/D4D03AQE1aVjMmMNdwg/profile-displayphoto-shrink_400_400/0/1695465908397?e=1725494400&v=beta&t=NznuepNu-8dyx7iE59TV2dyJtdkkhRrgvCQwEFw0fSU",
+            photoURL: USER_AVATAR,
           }).then(() => {
             // Profile updated!
-            const { uid, email, displayName, photoURL } = auth.currentUser;
+            const { uid, email, displayName, photoURL } = auth.currentUser!;
             dispatch(addUser({ uid: uid, email: email, name: displayName, photoURL: photoURL }));
-            navigate('/browse');
+            // navigate('/browse');
           }).catch((error) => {
             // An error occurred
             setErrorMsg(error.message);
@@ -61,7 +60,7 @@ const Login = () => {
           // Signed in 
           const user = userCredential.user;
           console.log(user);
-          navigate('/browse');
+          // navigate('/browse');
 
         })
         .catch((error) => {
@@ -78,7 +77,7 @@ const Login = () => {
       <div className="absolute">
         <img
           className=""
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={BG_URL}
           alt=""
         />
       </div>
