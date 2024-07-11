@@ -3,18 +3,18 @@ import Login from './Login';
 import Browse from './Browse';
 
 const Body = () => {
-    const appRoute = createBrowserRouter([
-        {
-          path:'/',
-          element: <Login/>
-        },
-        {
-          path:'/browse',
-          element: <Browse/>
-        }
-      ]);
+  const appRoute = createBrowserRouter([
+    {
+      path: '/',
+      element: <Login />
+    },
+    {
+      path: '/browse',
+      element: <Browse />
+    }
+  ]);
   return (
-    <div>
+    <div className="no-scrollbar">
       <RouterProvider router={appRoute} />
     </div>
   )
