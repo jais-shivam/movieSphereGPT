@@ -29,3 +29,4 @@ export default moviesSlice.reducer;
 
 export const selectNowPlayingMovies = (state: { movies: { nowPlayingMovies: []; }; }) => state.movies?.nowPlayingMovies;
 export const selectTrailerVideo = (state: { movies: { trailerVideo: []; }; }) => state.movies?.trailerVideo;
+export const selectPopularMovies = (state: { movies: { popularMovies: []; }; }) => state.movies?.popularMovies;
