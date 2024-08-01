@@ -47,7 +47,7 @@
   - MovieSuggestions
     - MovieLists * N
 
-- NetflixGPT
+- MovieSphereGPT
   - Search Bar
   - Movie Suggestions
 
